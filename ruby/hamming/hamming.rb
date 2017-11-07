@@ -12,10 +12,12 @@ class Hamming
 		@arr_b = b.split("")
 
  		@arr_a.each_index do |index|		
-			if @arr_a[index] == @arr_b[index]
+			if @arr_a[index] != @arr_b[index]
 				@match += 1	
-				p 'hit'
+				p @match
 			end
+
+			return @match
 		end
 
 		p @match
